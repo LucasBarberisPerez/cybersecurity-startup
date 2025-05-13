@@ -1,0 +1,68 @@
+@use "../../../style/animations.scss" as *;
+@use "../../../style/breakpoints.scss" as *;
+@use "../../../style/colors.scss" as *;
+section.hero_section {
+  padding: 1.5rem;
+  background-color: $background-color-secondary;
+  color: white;
+  width: 100%;
+
+  text-align: left;
+  @media (min-width: $desktop-breakpoint) {
+    //pc/tablet size
+  }
+  div.hero_header {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    :nth-child(n) {
+      width: 100%;
+    }
+
+    @media (min-width: $desktop-breakpoint) {
+      gap: 0;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    div.hero_header_info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+  }
+}
+
+img.hero_image {
+  user-select: none;
+  pointer-events: none;
+  max-width: 32rem;
+  width: 100%;
+  place-self: center;
+  object-fit: contain;
+  animation: fade-in 0.5s ease-in;
+}
+
+a.hero_header_button {
+  text-decoration: none;
+  text-align: center;
+  max-width: 15rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: $background-color-secondary;
+  color: white;
+  border: 0.1rem solid white;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+  place-self: center;
+  &:hover {
+    scale: 1.1;
+    background-color: white;
+    color: black;
+  }
+  @media (min-width: $desktop-breakpoint) {
+    place-self: start;
+    margin-top: 2.5rem;
+  }
+}

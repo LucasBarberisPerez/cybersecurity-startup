@@ -1,0 +1,99 @@
+@use "../../../../style/colors.scss" as *;
+@use "../../../../style/animations";
+nav.navbar {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  @media (min-width: 768px) {
+    display: flex;
+  }
+}
+
+nav.responsive_navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-color: $background-color-secondary;
+  color: $font-color-secondary;
+  gap: 1rem;
+  z-index: 10;
+  animation: fade-in 0.2s ease-in;
+  div.responsive_navbar_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1.5rem;
+
+    div.responsive_navbar_brand {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      h2 {
+        font-size: 2rem;
+      }
+      img {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+  div.responsive_navbar_links {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    overflow-y: auto;
+  }
+}
+
+svg.navbar_toggle {
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+  font-size: 3rem;
+
+  &:hover {
+    color: $background-color-secondary;
+    scale: 1.1;
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+svg.navbar_close {
+  cursor: pointer;
+  transition: all 0.1s ease-out;
+  font-size: 3rem;
+
+  &:hover {
+    scale: 1.1;
+  }
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+a.link {
+  text-decoration: none;
+  color: $font-color-secondary;
+  transition: all 0.2s ease-out;
+
+  @media (min-width: 768px) {
+    color: $font-color-primary;
+  }
+  &:hover {
+    cursor: pointer;
+    scale: 1.1;
+    font-weight: bold;
+  }
+}

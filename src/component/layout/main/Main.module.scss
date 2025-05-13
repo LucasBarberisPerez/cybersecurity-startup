@@ -1,0 +1,11 @@
+@use "../../../style/breakpoints.scss" as *;
+@use "../../../style/colors.scss" as *;
+main.main {
+  width: 100%;
+  display: grid;
+  gap: 1.5rem;
+  background-color: $background-color-tertiary;
+  @media (min-width: $desktop-breakpoint) {
+    gap: 5rem;
+  }
+}

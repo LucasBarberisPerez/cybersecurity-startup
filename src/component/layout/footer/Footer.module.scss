@@ -1,0 +1,104 @@
+@use "../../../style/colors.scss" as *;
+footer.footer {
+  transition: 0.2s ease-out;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $background-color-primary;
+  color: $font-color-primary;
+}
+
+div.footer_container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 0.5rem;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+div.footer_info {
+  padding: 1.5rem;
+  background-color: $background-color-tertiary;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+  button.text_link {
+    border-radius: 0.5rem;
+    border: $font-color-primary solid 0.1rem;
+    padding: 0.5rem;
+    min-width: 60%;
+    max-width: 100%;
+    text-align: center;
+    color: $font-color-primary;
+    text-decoration: none;
+    transition: 0.2s ease-out;
+    background-color: inherit;
+    &:hover {
+      color: $font-color-secondary;
+      background-color: $background-color-secondary;
+    }
+    svg {
+      display: block;
+      font-size: 2.5rem;
+      background-color: $background-color-secondary;
+      color: $font-color-primary;
+    }
+  }
+}
+
+p.footer_copyright {
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  background-color: $background-color-secondary;
+  color: $font-color-secondary;
+}
+
+div.footer_social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 0.5rem;
+  width: 100%;
+  a.social_link {
+    font-size: 2.5rem;
+    color: $background-color-secondary;
+    cursor: pointer;
+    transition: 0.2s ease-out;
+    &:hover {
+      color: $background-color-fortiary;
+      scale: 1.1;
+    }
+  }
+}
+
+a.footer_button {
+  text-decoration: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  min-width: 60%;
+  max-width: 100%;
+  text-align: center;
+  border: none;
+  background-color: $background-color-secondary;
+  color: $font-color-secondary;
+  cursor: pointer;
+  transition: 0.2s ease-out;
+  &:hover {
+    background-color: $background-color-fortiary;
+    color: $font-color-secondary;
+  }
+}
