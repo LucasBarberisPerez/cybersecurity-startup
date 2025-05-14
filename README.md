@@ -1,8 +1,5 @@
-# Landing page from a cybersecurity startup
+# Landing page from a cybersecurity startup [React & SASS]
 
 This project was fully completed for a freelance client who never finalized the payment. All original content has been replaced, and it is now presented solely as a demonstration project for portfolio purposes.
 
-| Technologies |
-|:------------:|
-|     React    |
-|     SASS     |
+[DEMO URL](https://lucasbarberisperez.github.io/cybersecurity-startup/)
